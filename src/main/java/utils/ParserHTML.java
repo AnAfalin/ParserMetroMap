@@ -55,7 +55,9 @@ public class ParserHTML {
 
                     for (Element connect : stationElement.select(".t-icon-metroln")) {
                         String connectLine = connect.attributes().get("class").substring(18);
-                        String connectStation = connect.attributes().get("title").substring(22, connect.attributes().get("title").length() - 1);
+
+                        String connectStation = connect.attributes().get("title")
+                                .substring(19, connect.attributes().get("title").length() - 1);
                         metroMap.addConnections(new Connections(numberLine, titleLine, connectLine, connectStation));
                     }
 

@@ -8,7 +8,7 @@ public class Connections {
         connections[1] = new Connection(line2, station2);
     }
 
-    class Connection {
+    static class Connection {
         String line;
         String station;
 
